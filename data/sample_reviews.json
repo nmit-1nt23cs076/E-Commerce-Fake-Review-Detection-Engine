@@ -1,0 +1,82 @@
+[
+  {
+    "review_id": "REV-1001",
+    "product_id": "PROD-TECH-01",
+    "product_name": "UltraSound Wireless ANC Headphones",
+    "user_id": "USER-BOT-99",
+    "rating": 5,
+    "review_text": "AMAZING PRODUCT! BEST HEADPHONES EVER! MUST BUY! A+++++ SELLER! 100% RECOMMEND TO EVERYONE!!",
+    "verified_purchase": false,
+    "timestamp": "2026-10-10T14:10:00Z"
+  },
+  {
+    "review_id": "REV-1002",
+    "product_id": "PROD-TECH-01",
+    "product_name": "UltraSound Wireless ANC Headphones",
+    "user_id": "USER-BOT-102",
+    "rating": 5,
+    "review_text": "AMAZING PRODUCT! BEST HEADPHONES EVER! MUST BUY! A+++++ SELLER! 100% RECOMMEND TO EVERYONE!!",
+    "verified_purchase": false,
+    "timestamp": "2026-10-10T14:12:00Z"
+  },
+  {
+    "review_id": "REV-1003",
+    "product_id": "PROD-TECH-01",
+    "product_name": "UltraSound Wireless ANC Headphones",
+    "user_id": "USER-BOT-108",
+    "rating": 5,
+    "review_text": "AMAZING PRODUCT! BEST HEADPHONES EVER! MUST BUY! A+++++ SELLER! 100% RECOMMEND TO EVERYONE!!",
+    "verified_purchase": false,
+    "timestamp": "2026-10-10T14:15:00Z"
+  },
+  {
+    "review_id": "REV-1004",
+    "product_id": "PROD-TECH-01",
+    "product_name": "UltraSound Wireless ANC Headphones",
+    "user_id": "USER-REAL-201",
+    "rating": 4,
+    "review_text": "I've been using these headphones for two weeks on my daily commute. The active noise cancellation cuts out train noise effectively, though battery life is closer to 24 hours rather than the advertised 30. The ear cushions are comfortable during long sessions.",
+    "verified_purchase": true,
+    "timestamp": "2026-10-08T09:30:00Z"
+  },
+  {
+    "review_id": "REV-1005",
+    "product_id": "PROD-TECH-02",
+    "product_name": "ProGamer Mechanical Keyboard",
+    "user_id": "USER-BOT-404",
+    "rating": 1,
+    "review_text": "Scam company terrible product fake do not buy broke immediately refund me worst scam ever",
+    "verified_purchase": false,
+    "timestamp": "2026-10-11T18:00:00Z"
+  },
+  {
+    "review_id": "REV-1006",
+    "product_id": "PROD-TECH-02",
+    "product_name": "ProGamer Mechanical Keyboard",
+    "user_id": "USER-REAL-315",
+    "rating": 5,
+    "review_text": "Tactile brown switches feel crisp and responsive. RGB lighting software was easy to configure on Windows. Build quality is solid with an aluminum backplate. Worth the price point.",
+    "verified_purchase": true,
+    "timestamp": "2026-10-09T16:45:00Z"
+  },
+  {
+    "review_id": "REV-1007",
+    "product_id": "PROD-BEAUTY-01",
+    "product_name": "GlowLuxe Vitamin C Facial Serum",
+    "user_id": "USER-PAID-77",
+    "rating": 5,
+    "review_text": "Miracle serum changed my life instantly! Erased all wrinkles overnight! You need to buy this right now! Best skincare product in the universe!",
+    "verified_purchase": false,
+    "timestamp": "2026-10-10T11:20:00Z"
+  },
+  {
+    "review_id": "REV-1008",
+    "product_id": "PROD-BEAUTY-01",
+    "product_name": "GlowLuxe Vitamin C Facial Serum",
+    "user_id": "USER-REAL-512",
+    "rating": 3,
+    "review_text": "Nice citrus scent and absorbs reasonably fast. After three weeks my skin feels moderately hydrated, but haven't seen significant brightening yet. Pipette dropper can be a bit leaky.",
+    "verified_purchase": true,
+    "timestamp": "2026-10-07T12:15:00Z"
+  }
+]

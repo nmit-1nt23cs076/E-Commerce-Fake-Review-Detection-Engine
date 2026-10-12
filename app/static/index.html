@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Fake Review & Bot Spam Detection Engine</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Bar -->
+    <header class="top-nav">
+      <div class="brand">
+        <span class="shield-badge">🛡️</span>
+        <div>
+          <h1>ReviewGuard AI</h1>
+          <span>E-Commerce Fake Review & Bot Spam Forensic Engine</span>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="runPipelineBtn" class="btn-primary">
+          <span class="icon">⚡</span> Run Airflow Pipeline
+        </button>
+      </div>
+    </header>
+
+    <!-- Metrics Bar -->
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <span class="metric-label">Total Analyzed</span>
+        <h2 id="totalReviewsCount">0</h2>
+        <span class="subtext">All store reviews</span>
+      </div>
+      <div class="metric-card danger">
+        <span class="metric-label">Bot Spam Detected</span>
+        <h2 id="fakeReviewsCount">0</h2>
+        <span class="subtext badge-danger">Quarantined</span>
+      </div>
+      <div class="metric-card warning">
+        <span class="metric-label">Suspicious Reviews</span>
+        <h2 id="suspiciousReviewsCount">0</h2>
+        <span class="subtext">Flagged for review</span>
+      </div>
+      <div class="metric-card success">
+        <span class="metric-label">Authentic Reviews</span>
+        <h2 id="authenticReviewsCount">0</h2>
+        <span class="subtext badge-success">Verified</span>
+      </div>
+      <div class="metric-card highlight">
+        <span class="metric-label">Fraud Attack Rate</span>
+        <h2 id="fraudRatePct">0%</h2>
+        <span class="subtext">Spam proportion</span>
+      </div>
+    </section>
+
+    <!-- Main Workspace -->
+    <div class="workspace-grid">
+      <!-- Live Forensics Tester -->
+      <section class="panel tester-panel">
+        <div class="panel-header">
+          <h3>🔬 Live Review Forensic Inspector</h3>
+          <span class="pill">Real-time NLP</span>
+        </div>
+        <form id="detectForm">
+          <div class="form-group">
+            <label for="reviewText">Review Content to Inspect:</label>
+            <textarea id="reviewText" rows="4" placeholder="Paste or type a customer review here to evaluate its authenticity..." required></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ratingSelect">Star Rating:</label>
+              <select id="ratingSelect">
+                <option value="5">⭐⭐⭐⭐⭐ (5 Stars)</option>
+                <option value="4">⭐⭐⭐⭐ (4 Stars)</option>
+                <option value="3">⭐⭐⭐ (3 Stars)</option>
+                <option value="2">⭐⭐ (2 Stars)</option>
+                <option value="1">⭐ (1 Star)</option>
+              </select>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="verifiedCheck">
+                <span>Verified Purchase</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="duplicateCheck">
+                <span>Repeated from another user</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="sample-chips">
+            <span>Quick Test Samples:</span>
+            <button type="button" class="chip" onclick="loadSample('bot_praise')">Bot Exaggeration (5★)</button>
+            <button type="button" class="chip" onclick="loadSample('bot_attack')">Competitor Bomb (1★)</button>
+            <button type="button" class="chip" onclick="loadSample('authentic')">Genuine Detailed (4★)</button>
+          </div>
+
+          <button type="submit" class="btn-inspect" id="inspectBtn">Analyze Review Risk</button>
+        </form>
+
+        <!-- Verdict Display -->
+        <div id="verdictBox" class="verdict-box hidden">
+          <div class="verdict-header">
+            <div>
+              <span class="verdict-badge" id="verdictBadge">AUTHENTIC</span>
+              <span class="severity-tag" id="severityTag">LOW RISK</span>
+            </div>
+            <div class="score-display">
+              <span class="score-num" id="fakeProbVal">0%</span>
+              <span class="score-desc">Spam Probability</span>
+            </div>
+          </div>
+
+          <div class="risk-flags-section">
+            <h4>Forensic Risk Flags Detected:</h4>
+            <ul id="riskFlagsList" class="risk-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feed of Flagged & Analyzed Reviews -->
+      <section class="panel feed-panel">
+        <div class="panel-header">
+          <h3>📋 Store Reviews Audit Feed</h3>
+          <button id="refreshFeedBtn" class="btn-sm">Refresh Feed</button>
+        </div>
+        <div id="reviewFeed" class="review-feed">
+          <div class="feed-placeholder">Click 'Run Airflow Pipeline' to load and audit stored reviews.</div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
