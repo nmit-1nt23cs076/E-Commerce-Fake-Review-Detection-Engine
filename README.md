@@ -64,50 +64,7 @@ Orchestrated with **Apache Airflow 2.x** and accompanied by an interactive **Rea
    - `task_quarantine_and_persist`: Isolates high-risk reviews and writes to SQLite database.
    - `task_generate_audit_report`: Produces daily fraud rate reports and executive metrics.
 
-4. **Real-Time Interactive Dashboard**:
-   - **Instant Review Inspector**: Test live customer reviews with explainable risk flags.
-   - **Fraud Metrics**: Monitor store-wide fraud rate, quarantined counts, and authentic proportions.
-   - **One-Click Airflow Trigger**: Run the batch audit pipeline directly from the UI.
 
----
-
-## 🚀 Quick Start Guide
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/nmit-1nt23cs076/E-Commerce-Fake-Review-Detection-Engine.git
-cd E-Commerce-Fake-Review-Detection-Engine
-```
-
-### 2. Set Up Virtual Environment
-```bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# macOS / Linux
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the Pipeline Standalone
-You can execute the 5-stage Airflow detection pipeline directly:
-```bash
-python dags/fake_review_detection_dag.py
-```
-
-### 5. Launch the Forensic Web Dashboard
-```bash
-python run.py
-```
-Open **[http://localhost:8080](http://localhost:8080)** in your browser to interact with the dashboard.
-
----
 
 ## 📂 Project Structure
 
